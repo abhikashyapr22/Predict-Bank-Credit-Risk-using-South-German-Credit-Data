@@ -48,8 +48,8 @@ class DataTransformation:
             test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
             
             #selecting input feature for train and test dataframe
-            input_feature_train_df=train_df.drop(TARGET_COLUMN,axis=1)
-            input_feature_test_df=test_df.drop(TARGET_COLUMN,axis=1)
+            input_feature_train_df=train_df.drop(TARGET_COLUMN, axis=1)
+            input_feature_test_df=test_df.drop(TARGET_COLUMN,  axis=1)
 
             #selecting target feature for train and test dataframe
             target_feature_train_df = train_df[TARGET_COLUMN]

@@ -4,7 +4,7 @@ import json
 
 from src.config import mongo_client
 
-DATA_FILE_PATH="/config/workspace/SouthGermanCreditRisk.csv"
+DATA_FILE_PATH="SouthGermanCreditRisk.csv"
 DATABASE_NAME="sgc"
 COLLECTION_NAME="credit_risk"
 
@@ -17,8 +17,10 @@ if __name__=="__main__":
 
     json_record = list(json.loads(df.T.to_json()).values())
     print(json_record[0])
+    
     #insert converted json record to mongo db
     mongo_client[DATABASE_NAME][COLLECTION_NAME].insert_many(json_record)
+    print("Done")
 
 
 

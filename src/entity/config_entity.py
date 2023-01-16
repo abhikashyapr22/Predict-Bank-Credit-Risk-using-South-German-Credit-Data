@@ -3,7 +3,7 @@ from src.exception import SGCException
 from src.logger import logging
 from datetime import datetime
 
-FILE_NAME = "sgc.csv"
+FILE_NAME = "sgc_features.csv"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 TRANSFORMER_OBJECT_FILE_NAME = "transformer.pkl"
